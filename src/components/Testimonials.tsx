@@ -41,7 +41,7 @@ function TestimonialCard({ t, i }: { t: typeof testimonials[0]; i: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-950 overflow-hidden">
+    <section className="py-24 overflow-hidden">
       {/* Header */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">

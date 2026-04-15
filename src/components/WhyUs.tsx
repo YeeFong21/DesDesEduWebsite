@@ -47,7 +47,10 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="about" className="py-24 bg-[#0d0d0d] dark:bg-[#0d0d0d] relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden">
+
+      {/* Dark overlay so this section always reads dark regardless of theme */}
+      <div className="absolute inset-0 bg-[#0d0d0d]/85 dark:bg-[#0d0d0d]/92 backdrop-blur-[2px]" />
 
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-teal-900/20 blur-[120px] pointer-events-none" />

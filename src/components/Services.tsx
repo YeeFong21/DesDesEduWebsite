@@ -54,7 +54,7 @@ const bentoConfig = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white dark:bg-[#0d0d0d] overflow-hidden">
+    <section id="services" className="py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header — word-by-word reveal + slide-in subtitle */}

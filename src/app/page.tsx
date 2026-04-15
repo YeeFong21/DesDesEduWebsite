@@ -7,10 +7,12 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import GlobalBackground from "@/components/GlobalBackground";
 
 export default function Home() {
   return (
     <main>
+      <GlobalBackground />
       <ScrollProgress />
       <Navbar />
       <Hero />

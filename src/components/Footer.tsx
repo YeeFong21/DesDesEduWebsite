@@ -15,7 +15,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400 py-12 overflow-hidden">
+    <footer className="bg-gray-950/95 backdrop-blur-sm text-gray-400 py-12 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <StaggerContainer stagger={0.1} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Brand */}

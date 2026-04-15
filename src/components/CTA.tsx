@@ -7,7 +7,7 @@ import { FadeUp, ScalePop, RevealText } from "@/components/ui/RevealText";
 
 export default function CTA() {
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-gray-950 overflow-hidden">
+    <section id="contact" className="py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <ScalePop>

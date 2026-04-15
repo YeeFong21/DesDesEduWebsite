@@ -143,7 +143,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={containerRef} id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#f8f7f4] dark:bg-[#0d0d0d]">
+    <section ref={containerRef} id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <CursorSpotlight />
       <TopoBackground />
       <Particles />
