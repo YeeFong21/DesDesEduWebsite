@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "@/lib/data";
+import { FadeUp, RevealText } from "@/components/ui/RevealText";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -16,13 +17,11 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 const avatarColors = ["from-teal-400 to-teal-700", "from-purple-400 to-purple-700", "from-amber-400 to-amber-600", "from-blue-400 to-blue-700"];
-
-// Duplicate for seamless loop
 const allTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
 function TestimonialCard({ t, i }: { t: typeof testimonials[0]; i: number }) {
   return (
-    <div className="flex-shrink-0 w-[320px] mx-3 bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex-shrink-0 w-[320px] mx-3 bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
       <StarRating rating={t.rating} />
       <p className="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
         &ldquo;{t.text}&rdquo;
@@ -43,25 +42,28 @@ function TestimonialCard({ t, i }: { t: typeof testimonials[0]; i: number }) {
 export default function Testimonials() {
   return (
     <section className="py-24 bg-gray-50 dark:bg-gray-950 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-teal-600 dark:text-teal-400 mb-3 block">
-            Client Stories
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white">
-            Real Results,<br />
-            <span className="text-teal-500">Real People</span>
-          </h2>
-        </motion.div>
+      {/* Header */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="text-center">
+          <FadeUp delay={0} distance={40}>
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-teal-600 dark:text-teal-400 mb-3 block">
+              Client Stories
+            </span>
+          </FadeUp>
+          <RevealText
+            text="Real Results, Real People"
+            as="h2"
+            className="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white"
+          />
+          <FadeUp delay={0.3} distance={30} className="mt-4">
+            <p className="text-gray-500 dark:text-gray-400 text-lg max-w-md mx-auto">
+              Hear from people who have transformed their lives through counseling.
+            </p>
+          </FadeUp>
+        </div>
       </div>
 
-      {/* Marquee row 1 — left to right */}
+      {/* Marquee rows */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
@@ -78,7 +80,6 @@ export default function Testimonials() {
           </motion.div>
         </div>
 
-        {/* Row 2 — right to left (offset) */}
         <div className="flex overflow-hidden">
           <motion.div
             className="flex"
