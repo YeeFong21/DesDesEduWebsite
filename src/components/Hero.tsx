@@ -25,7 +25,7 @@ function TopoBackground() {
 
 // ── Floating particles ────────────────────────────────────────────────────────
 function Particles() {
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = Array.from({ length: 8 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
@@ -147,10 +147,6 @@ export default function Hero() {
       <CursorSpotlight />
       <TopoBackground />
       <Particles />
-
-      {/* Aurora blobs */}
-      <div className="absolute top-[-15%] left-[-10%] w-[55vw] h-[55vw] rounded-full bg-teal-300/10 dark:bg-teal-700/10 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-5%] w-[45vw] h-[45vw] rounded-full bg-amber-300/10 dark:bg-amber-600/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full relative z-10">
         <motion.div style={{ y, opacity }} className="grid lg:grid-cols-5 gap-8 items-center">
