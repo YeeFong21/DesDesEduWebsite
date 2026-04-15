@@ -64,7 +64,7 @@ export default function WhyUs() {
               key={label}
               variants={{
                 hidden: { opacity: 0, y: 40, scale: 0.85 },
-                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] } }
+                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } }
               }}
               className="bg-gray-950 p-8 text-center"
             >
@@ -116,7 +116,7 @@ export default function WhyUs() {
                   initial={{ opacity: 0, x: 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
-                  transition={{ delay: i * 0.07, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ delay: i * 0.07, duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                   className="flex items-start gap-3 p-4 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-teal-800 transition-colors group"
                 >
                   <CheckCircle className="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" />

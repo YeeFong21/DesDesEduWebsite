@@ -84,7 +84,7 @@ export function FadeUp({
       initial={{ opacity: 0, y: distance, scale: 0.97 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       className={className}
     >
       {children}
@@ -112,7 +112,7 @@ export function SlideIn({
       initial={{ opacity: 0, x }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       className={className}
     >
       {children}
@@ -137,7 +137,7 @@ export function ScalePop({
       initial={{ opacity: 0, scale: 0.88 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.75, delay, ease: [0.34, 1.56, 0.64, 1] }}
+      transition={{ duration: 0.75, delay, ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number] }}
       className={className}
     >
       {children}
@@ -176,5 +176,5 @@ export function StaggerContainer({
 /** Variant pair used by StaggerContainer children — no blur */
 export const staggerItem = {
   hidden:  { opacity: 0, y: 50, scale: 0.96 },
-  visible: { opacity: 1, y: 0,  scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0,  scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 };

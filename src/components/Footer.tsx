@@ -20,7 +20,7 @@ export default function Footer() {
         <StaggerContainer stagger={0.1} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <motion.div
-            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } }}
+            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } } }}
             className="flex flex-col gap-3"
           >
             <a href="#home" className="flex items-center gap-2 text-white font-bold text-lg">
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Links */}
           <motion.div
-            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } }}
+            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } } }}
           >
             <p className="text-white font-semibold mb-4 text-sm">Navigation</p>
             <ul className="flex flex-col gap-2">
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Contact */}
           <motion.div
-            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } }}
+            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } } }}
           >
             <p className="text-white font-semibold mb-4 text-sm">Get in Touch</p>
             <ul className="flex flex-col gap-2 text-sm">

@@ -40,7 +40,7 @@ export default function FAQ() {
               initial={{ opacity: 0, y: 50, scale: 0.97 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-30px" }}
-              transition={{ delay: i * 0.07, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: i * 0.07, duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               className="rounded-2xl bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 overflow-hidden"
             >
               <button

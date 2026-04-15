@@ -118,7 +118,7 @@ function AnimatedHeadline({ text }: { text: string }) {
           key={i}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
           className="inline-block mr-[0.25em]"
         >
           {word === "&" ? <span className="text-teal-500">&amp;</span> : word}
@@ -194,7 +194,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
             className="hidden lg:flex lg:col-span-2 flex-col items-center gap-4"
           >
             {/* Globe label */}
